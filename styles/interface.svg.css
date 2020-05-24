@@ -1,0 +1,30 @@
+#interface svg {
+  position   : absolute;
+  left       : 50%;
+  top        : 0%;
+  width      : calc(100% - 2 * 38.2%);
+  height     : 15px;
+  transform  : translate( -50%, -50% );
+
+  align-self : center;
+}
+#interface svg path {
+  stroke         : rgba( 136, 45, 167, 1.00 );
+  stroke         : rgba( 201, 187, 60, 1.00 );
+  stroke-linecap : round;
+  stroke-linejoin: round;
+  fill           : none;
+}
+
+/* Design */
+#interface svg {
+  pointer-events: none;
+}
+#interface svg path {
+  stroke        : rgba( 136, 45, 167, 1.00 );
+  stroke        : rgba( 201, 187, 60, 1.00 );
+}
+#glow feDropShadow {
+  flood-color   : #b7daff;
+}
+
