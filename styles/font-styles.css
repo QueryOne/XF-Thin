@@ -1,0 +1,12 @@
+
+div.justify-center {
+  text-align: center;
+}
+
+span.italic {
+  font-style: italic;
+}
+
+span.black {
+  color: rgba( 141, 141, 167, 1.00 );
+}
