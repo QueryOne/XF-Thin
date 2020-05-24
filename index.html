@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html><meta charset="utf-8">
+ <head><title></title>
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Oswald" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand|Inconsolata|Overpass+Mono:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Oswald|Roboto+Mono|Ubuntu+Mono|Roboto|Nanum+Gothic|Didact+Gothic" rel="stylesheet">
+
+  <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+  <script src='./scripts/colyseus.min.js'></script>
+
+  <link href='./styles/index.css' rel='stylesheet'/>
+  <link href='./styles/hud.css' rel='stylesheet'/>
+  <link href='./styles/hud.terminal.css' rel='stylesheet'/>
+  <link href='./styles/interface.css' rel='stylesheet'/>
+  <link href='./styles/interface.svg.css' rel='stylesheet'/>
+  <link href='./styles/interface.multiplayer.css' rel='stylesheet'/>
+  <link href='./styles/font-styles.css' rel='stylesheet'/>
+
+  <script src='./scripts/xf.interface.js'></script>
+  <script src='./scripts/audio.js'></script>
+  <script src='./scripts/xf.utility.js'></script>
+  <script src='./scripts/xf-one.time-engine.constructor.js'></script>
+  <script src='./scripts/xf-one.world.constructor.js'></script>
+  <script src='./scripts/xf-one.item.constructor.js'></script>
+  <script src='./scripts/xf-one.craft.constructor.js'></script>
+  <script src='./scripts/xf-one.landing.js'></script>
+  <script src='./scripts/namegen.js'></script>
+  <script src='./scripts/hud.js'></script>
+
+  <script src='./scripts/xf-one.compete.js'></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.12.0/d3.min.js"
+    crossorigin="anonymous"></script>
+ <style>
+
+ </style>
+ </head>
+ <body>
+   <div id="game">
+   <canvas id="map" width="910px" height="580px"></canvas>
+   </div>
+   <div id="hud"></div>
+ </body>
+<script>
+
+correctNose = xf.correctNose
+  
+window.onload = function() {
+  xf.interface.draw()
+  radio.initiate()
+
+  $.ajax({
+    url: 'https://raw.githubusercontent.com/QueryOne/xu/master/util.js?' + Math.random(),
+    success: function(e) {
+      try {
+        eval(e)
+        $('body').trigger('ready')
+      } catch(err) {
+        console.log(err)
+      }
+    },
+  })
+
+  var w = $('#game').width()
+  var h = $('#game').height()
+  var c = document.getElementById('map')
+  c.width  = w
+  c.height = h
+  c.style.width  = w + 'px'
+  c.style.height = h + 'px'
+  ow = w / 2
+  oh = h / 2
+
+  body = $('body')
+  
+  $('body').on('ready', function(e) {
+    canvas  = d3.select('canvas')
+    context = canvas.node().getContext('2d')
+
+    xf.landing.generate()
+  })
+}
+
+
+</script>
+</html>
