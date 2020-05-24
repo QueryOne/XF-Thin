@@ -1,0 +1,259 @@
+/* Positioning */
+#interface {
+  position   : absolute;
+  left       : 50%;
+  top        : 50%;
+  height     : calc(7 * 55px + 2 * 37px);
+  width      : 290px;
+  transform  : translate( -50%, -50% );
+}
+#interface-border-left {
+  position   : absolute;
+  top        : 0%;
+  left       : 0%;
+  height     : 38.2%;
+  width      : 38.2%;
+}
+#interface-border-right {
+  position   : absolute;
+  bottom     : 0%;
+  right      : 0%;
+  height     : 38.2%;
+  width      : 38.2%;
+}
+#interface-border-left-element {
+  position   : absolute;
+  left       : 0%;
+  top        : 0%;
+  height     : 100%;
+  width      : 1px;
+}
+#interface-border-top-element {
+  position   : absolute;
+  left       : 0%;
+  top        : 0%;
+  height     : 1px;
+  width      : 100%;
+}
+#interface-border-right-element {
+  position   : absolute;
+  right      : 0%;
+  top        : 0%;
+  height     : 100%;
+  width      : 1px;
+}
+#interface-border-bottom-element {
+  position   : absolute;
+  right      : 0%;
+  bottom     : 0%;
+  height     : 1px;
+  width      : 100%;
+}
+.interface-button {
+  position   : relative;
+  top        : 37px;
+  height     : 55px;
+  width      : 100%;
+}
+
+#interface-label {
+  position   : absolute;
+  right      : 0%;
+  top        : -45px;
+  height     : 45px;
+  width      : 100%;
+}
+
+#interface-template {
+  position   : absolute;
+  left       : 50%;
+  top        : 100%;
+  height     : 0px;
+  width      : 290px;
+  transform  : translate( -50%, 0% );
+}
+#interface-template.full {
+  top        : 0%;
+  height     : calc(7 * 55px + 2 * 37px);
+}
+#interface-template-exit {
+  position   : absolute;
+  right      : 0%;
+  top        : 0%;
+  height     : 44px;
+  width      : 44px;
+}
+#interface-hostValue, #interface-joinValue,
+#interface-competeValue, #interface-whyValue,
+#interface-aboutValue {
+  position   : absolute;
+  left       : 0.9em;
+  top        : 32px;
+  height     : calc(100% - 2 * 36px);
+  width      : calc(100% - 2 * 0.9em);
+}
+#interface-aboutValue {
+  height     : calc(100% - 1 * 36px);
+  width      : calc(100% - 1 * 0.9em);
+}
+#interface-aboutValue-content {
+  height     : 100%;
+}
+#interface-aboutValue .lesser {
+}
+.interface-world {
+  position   : relative;
+  height     : 34px;
+  width      : 100%;
+}
+.interface-world-label {
+  position    : absolute;
+  left        : 0%;
+  top         : 0%;
+  height      : 100%;
+  width       : 76%;
+  padding-left: 1.3em;
+}
+.interface-world-count {
+  position     : absolute;
+  right        : 0%;
+  top          : 0%;
+  height       : 100%;
+  width        : calc(100% - 76%);
+  padding-right: 1.3em;
+}
+
+/* Design */
+#interface {
+  background   : rgba(  9, 9, 16, 1.00 );
+  background-image: url('../assets/raster-field.png');
+}
+#interface-border-left, #interface-border-right, #interface-label {
+  pointer-events: none;
+}
+#interface-border-left-element {
+  background : rgb(2,0,36);
+  background : linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(46,46,68,1) 84.8%, rgba(121,193,208,0.15) 100%);
+}
+#interface-border-top-element {
+  background : rgb(2,0,36);
+  background : linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(46,46,68,1) 84.8%, rgba(121,193,208,0.15) 100%);
+}
+#interface-border-right-element {
+  background : rgb(2,0,36);
+  background : linear-gradient(180deg, rgba(121,193,208,0.15) 0%, rgba(46,46,68,1) 15.2%, rgba(2,0,36,1) 100%);
+}
+#interface-border-bottom-element {
+  background : rgb(2,0,36);
+  background : linear-gradient(90deg, rgba(121,193,208,0.15) 0%, rgba(46,46,68,1) 15.2%, rgba(2,0,36,1) 100%);
+}
+.interface-button {
+  cursor     : pointer;
+  user-select: none;
+  transition : all 70ms;
+}
+.interface-button:hover {
+  background : rgba( 121, 193, 208, 0.03 );
+}
+#interface-label {
+  user-select: none;
+}
+
+#interface-template {
+  user-select: none;
+  opacity    : 0%;
+  background : rgba( 13, 13, 23, 1.00 );
+  background-image: url('../assets/raster.png');
+}
+#interface-template.full {
+  opacity    : 100%;
+}
+#interface-template-exit {
+  cursor     : pointer;
+  user-select: none;
+}
+#interface-aboutValue-content {
+  overflow-y : scroll;
+}
+#interface-aboutValue-content::-webkit-scrollbar {
+  width        : calc(0.9em - 3px);
+}
+#interface-aboutValue-content::-webkit-scrollbar-track {
+  border       : solid 0.9em transparent;
+}
+#interface-aboutValue-content::-webkit-scrollbar-thumb {
+  border-radius: 0px;
+  border-right : 3px solid rgba( 73, 73, 113, 0.67 ); 
+}
+
+/* Text */
+.interface-button {
+  color      : rgba( 121, 193, 208, 0.33 );
+  font-family: 'Quicksand';
+  font-size  : 17pt;
+  text-align : center;
+  line-height: 55px;
+}
+.interface-button.muted {
+  color      : rgba( 111, 111, 111, 0.44 );
+}
+.interface-button:hover {
+  color      : rgba( 121, 193, 208, 0.83 );
+}
+#interface-label {
+  color      : rgba( 111, 111, 111, 0.83 );
+  font-family: 'Quicksand';
+  font-size  : 17pt;
+  line-height: 55px;
+  text-align : right;
+}
+.interface-xf {
+  color      : rgba(  96,  96, 168, 0.80 );
+}
+.interface-one .one {
+  color      : rgba(  88,  88,  88, 0.63 );
+}
+.interface-one .two {
+  color      : rgba(  65,  65,  65, 0.53 );
+}
+.interface-one .three {
+  color      : rgba(  45,  45,  45, 0.43 );
+}
+#interface-template-exit {
+  color      : rgba( 211, 111, 111, 0.83 );
+  font-family: 'Overpass Mono', 'Quicksand';
+  font-size  : 19pt;
+  line-height: 44px;
+  text-align : center;
+}
+#interface-template-exit:hover {
+  color      : rgba( 244,  56,  56, 0.83 );
+}
+#interface-hostValue, #interface-joinValue,
+#interface-competeValue, #interface-whyValue,
+#interface-aboutValue {
+  color      : rgba( 111, 111, 141, 0.83 );
+  font-family: 'Quicksand';
+  font-size  : 11pt;
+  white-space: pre-wrap;
+  line-height: 1.7em;
+  text-align : left;
+}
+#interface-hostValue, #interface-joinValue, #interface-competeValue {
+  text-align : center;
+}
+#interface-whyValue div {
+  line-height: 37px;
+}
+#interface-aboutValue .lesser {
+  font-size  : 9pt;
+  line-height: 1.4em;
+}
+.interface-world-label {
+  text-align : left;
+  line-height: 34px;
+}
+.interface-world-count {
+  text-align : right;
+  line-height: 34px;
+}
