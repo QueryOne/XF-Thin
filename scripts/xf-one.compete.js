@@ -54,7 +54,7 @@ xf.joinWorld = function(roomId) {
   var p = $.when(1)
  
   p = p.then(function() {
-    return client.joinById(roomId, {roomId: roomId, token:''})
+    return client.joinById(roomId, {roomId: roomId, token: $('#github-identifier').val()})
   }).then(c => {
     world = c
     if (c.hasJoined == true) {
