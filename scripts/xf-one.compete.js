@@ -3,7 +3,7 @@ xf = typeof xf != 'undefined' ? xf : {}
 xf.competeGenerate = function() {
   // const client = new Colyseus.Client('ws://localhost:3000')
   // client = typeof client != 'undefined' ? client : new Colyseus.Client('ws://localhost:3000')
-  client = typeof client != 'undefined' ? client : new Colyseus.Client('ws://198.199.80.29')
+  client = typeof client != 'undefined' ? client : new Colyseus.Client('wss://198.199.80.29')
   // client = typeof client != 'undefined' ? client : new Colyseus.Client('ws://xf-one.com/')
 
   // client.joinOrCreate('Xenius')
