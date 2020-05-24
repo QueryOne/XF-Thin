@@ -1,0 +1,68 @@
+
+/* Positioning */
+#interface-multiplayer {
+  position  : relative;
+}
+
+#interface-multiplayer-user, #interface-multiplayer-token, #interface-multiplayer-encryption {
+  position  : relative;
+  left      : 0%;
+  top       : 0%;
+  height    : 29px;
+  width     : 100%;
+}
+#interface-multiplayer-user-label {
+  position  : absolute;
+  left      : 0%;
+  top       : 0%;
+  height    : 100%;
+  width     : 70px;
+}
+#interface-user, #github-identifier, #github-encryption {
+  position     : absolute;
+  left         : calc(70px + 1.4em);
+  top          : 0%;
+  height       : calc(100% - 4px);
+  margin-top   : 2px;
+  margin-bottom: 2px;
+  padding-left : 0.6em;
+  width        : calc(100% - 70px - 1.4em - 1.1em);
+}
+#interface-multiplayer-token-label {
+  position  : relative;
+  left      : 0%;
+  top       : 0%;
+  height    : 100%;
+  width     : 70px;
+}
+#interface-multiplayer-encryption-label {
+  position  : relative;
+  left      : 0%;
+  top       : 0%;
+  height    : 100%;
+  width     : 70px;
+}
+
+/* Design */
+#interface-multiplayer-user {
+  border-top: 1px solid rgba( 111, 111, 181, 0.11 );
+}
+#interface-user, #github-identifier, #github-encryption {
+  background: none;
+  background: rgba( 14, 34, 134, 0.08 );
+  outline   : none;
+  border    : none;
+  padding   : none;
+}
+
+/* Text */
+#interface-multiplayer-user-label, #interface-multiplayer-token-label, #interface-multiplayer-encryption-label {
+  text-align : left;
+  line-height: 31px;
+}
+#interface-user, #github-identifier, #github-encryption {
+  line-height: 24px;
+  color      : rgba( 111, 111, 141, 0.83 );
+  font-family: 'Quicksand';
+  font-size  : 11pt;
+}
